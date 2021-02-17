@@ -19,16 +19,7 @@ body {
     box-sizing: border-box;
 }
 
-html::selection,
-div::selection,
-h1::selection,
-h3::selection,
-a::selection,
-p::selection,
-li::selection,
-span::selection,
-img::selection,
-hr::selection {
+::selection {
     color: #181818;
     background: var(--green);
 }
@@ -40,6 +31,10 @@ hr::selection {
 
 #title-green {
     color: var(--green);
+}
+
+#title {
+    margin-top: .6em;
 }
 
 
@@ -228,10 +223,7 @@ hr::selection {
 }
 
 @media only screen and (min-width: 65.625em) {
-    /* Break out main cards into two columns */
     .main-cards {
         column-count: 2;
     }
 }
-
-
