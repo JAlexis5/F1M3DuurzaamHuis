@@ -19,6 +19,15 @@ body {
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--green);
+    border-radius: 0px;
+}
+
 ::selection {
     color: #181818;
     background: var(--green);
