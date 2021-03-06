@@ -6,8 +6,18 @@
     --darkerer : #1a1a1a;
     --darker: #202020;
     --dark: #292929;
-    --green: #01B636;
+    --green: #0b8e36;
     --white: #ffffff;
+}
+
+/* lightmode colors */
+:root {
+    --lighterer : #ffffff;
+    --lighter: #f9f3f3;
+    --light: #dddddd;
+    --green: #0b8e36;
+    --lightgreen: #3aaa35;
+    --lightergreen: #94c11f;
 }
 
 body {
@@ -18,6 +28,31 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+/* dark mode switch colors */
+.header.color {
+    background: var(--green);
+}
+.main.color {
+    background: white;
+}
+
+.side-nav.color {
+    background: var(--light);
+}
+
+.footer.color {
+    background: var(--green);
+}
+.widget.color {
+    background: var(--light);
+}
+
+.zoeken.color {
+    background: white;
+}
+/* dark mode switch colors end */
+
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -31,6 +66,10 @@ body {
 ::selection {
     color: #181818;
     background: var(--green);
+}
+
+.fas {
+    color: var(--green);
 }
 
 .logo {
@@ -49,15 +88,30 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 240px 1fr;
-    grid-template-rows: 50px 1fr 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
     grid-template-areas:
-        "sidenav header"
-        "sidenav main"
-        "sidenav footer";
+      'header'
+      'main'
+      'footer';
     height: 100vh;
-}
+  }
 
+ 
+/* header begint hier */
+  .menu-icon {
+    position: fixed;
+    display: flex;
+    top: 5px;
+    left: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    padding: 12px;
+    color: var(--green);
+  }
 
 .header {
     grid-area: header;
@@ -69,18 +123,8 @@ body {
 
 }
 
-.side-nav div {
-    margin-left: .5em;
-    font-weight: 600;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
 #avatar {
-    vertical-align: middle;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+    font-size: 1.5em;
     margin-right: .5em;
     cursor: pointer;
 }
@@ -130,33 +174,107 @@ body {
     line-height: 20px;
     width: 0px;
 }
+/* header einde */
 
-
+/* sidenav begint */
 .side-nav {
-    grid-area: side-nav;
+    grid-area: sidenav;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 240px;
     position: fixed;
     overflow-y: auto;
+    transform: translateX(-245px);
+    transition: all .6s ease-in-out;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    z-index: 2;
     background-color: var(--darkerer);
+}
+
+.side-nav.active {
+    transform: translateX(0);
+  }
+
+.sidenav-close-icon {
+  position: absolute;
+  visibility: visible;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--green);
+}
+
+.side-nav div {
+    margin-left: .5em;
+    font-weight: 600;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 .sidenav-list {
     list-style: none;
+    padding: 0;
+    padding-top: 25px;
 }
 
-.main {
-    grid-area: main;
-    background-color: var(--darker);
+.sidenav-list-item {
+    padding: 10px 10px;
+    cursor: pointer;
 }
 
-.footer {
-    grid-area: footer;
-    background-color: var(--dark);
+.sidenav-list-item:hover {
+    background: var(--darker);
 }
 
+
+.sidenav-list-item .fas {
+    margin-right: 10px;
+}
+
+.switch-container {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    transition: all .1s linear;
+    position: relative;
+}
+
+.switch-btn {
+    width: 60px;
+    height: 30;
+}
+
+.btn-background {
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    background: var(--green);
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.btn-face {
+    position: relative;
+    top: 2px;
+    left: -12px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 1px 3px 3px 0 rgb(0, 0, 0, .2);
+    transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.btn-face.move {
+    transform: translateX(26px);
+}
+
+
+/* side nav einde */
+
+/* main content begint hier */
 .main {
     grid-area: main;
     background-color: var(--darker);
@@ -220,8 +338,9 @@ body {
 .card:nth-child(3) {
     height: 485px;
 }
+/* main content einde */
 
-
+/* footer begint hier */
 .footer {
     grid-area: footer;
     display: flex;
@@ -230,9 +349,36 @@ body {
     padding: 0 16px;
     background-color: var(--dark);
 }
+/* footer einde */
 
-@media only screen and (min-width: 65.625em) {
-    .main-cards {
-        column-count: 2;
+@media only screen and (min-width: 46.875em) {
+    .grid-container {
+      grid-template-columns: 240px 1fr;
+      grid-template-areas:
+        "sidenav header"
+        "sidenav main"
+        "sidenav footer";
     }
-}
+  
+    .side-nav {
+      position: relative;
+      transform: translateX(0);
+    }
+  
+    .sidenav-close-icon {
+      visibility: hidden;
+    }
+  }
+
+  @media only screen and (min-width: 65.625em) {
+    .main-cards {
+      column-count: 2;
+    }
+  }
+
+
+  @media only screen and (max-width: 46.875em) {
+    .zoeken{
+        margin: 35px;
+    }
+  }

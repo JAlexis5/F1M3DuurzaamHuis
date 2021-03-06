@@ -6,7 +6,7 @@
     --darkerer : #1a1a1a;
     --darker: #202020;
     --dark: #292929;
-    --green: #01B636;
+    --green: #0b8e36;
     --white: #ffffff;
 }
 
@@ -40,7 +40,7 @@ img {
     height: 20em;
     width: 20em;
     background-color: var(--dark);
-    border-radius: 10%;
+    border-radius: 2%;
     margin-bottom: 10em;
 } 
 
@@ -53,33 +53,33 @@ input {
     font-family: 'Montserrat', sans-serif;  
     background-color: var(--dark);
     text-align: center;
-    font-size: 12px;
+    font-size: 15px;
     color: white;
     outline: none;
     border-style: none;
     border-bottom: 2px solid var(--green);
     margin-top: 3em;
     height: 2em;
-    width: 20em;
+    width: 16em;
 }
 
 button {
     font-family: 'Montserrat', sans-serif;  
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 400;
     border-style: none;
-    border-radius: 10%;
-    padding: 10px;
-    background-color: var(--darkerer);
-    color: white;
+    border-radius: 2%;
+    padding: 10px 3em 10px;
+    background-color: var(--green);
+    color: black;
     margin-top: 3em;
     font-size: 20px;
     
 }
 
 button:hover {
-    background-color: var(--green);
-    color: var(--darkerer);
+    background-color: var(--darker);
+    color: var(--white);
     transition: .5s;
 }
 
