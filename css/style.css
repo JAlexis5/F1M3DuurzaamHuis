@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap');
 
-
 /* darkmode colors */
 :root {
     --darkerer : #1a1a1a;
@@ -79,6 +78,10 @@ body {
 .fa-user-circle.color {
     color: white;
 }
+
+.zoek-text.color {
+    color: black;
+}
 /* dark mode switch colors end */
 
 
@@ -88,7 +91,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: var(--green);
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 ::selection {
@@ -266,12 +269,12 @@ body {
     justify-content: end;
     align-items: flex-end;
     transition: all .1s linear;
-    position: relative;
+
 }
 
 .switch-btn {
     width: 60px;
-    height: 30;
+    height: 30px;
 }
 
 .btn-background {
@@ -303,6 +306,29 @@ body {
 /* side nav einde */
 
 /* main content begint hier */
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welkom1 {
+    font-weight: 500;
+}
+
+#welkom {
+    font-weight: 800;
+    font-size: 3em;
+    color: var(--green);
+}
+
+.random {
+    color: var(--green);
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
 .main {
     grid-area: main;
     background-color: var(--darker);

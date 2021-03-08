@@ -1,12 +1,18 @@
 
 function redirect(){
     let naam = document.getElementById('login').value;
-    window.location.href = "https://samedpolat.nl/GreenHouse/home.html"
+    //window.location.href = "https://samedpolat.nl/GreenHouse/home.html"
+    window.location.href = "home.html"
     console.log("test");
     localStorage.setItem("storage",naam);
 }
 
-document.getElementById('welkom').innerHTML = "Welkom, " + (localStorage.getItem("storage"));
+$('.random').each(function () {
+  var x = Math.floor((Math.random() * 80) + 1);
+  $(this).text(x)
+});
+
+document.getElementById('welkom').innerHTML = " " + (localStorage.getItem("storage"));
 
 const menuIconEl = $('.menu-icon');
 const sidenavEl = $('.side-nav');
@@ -42,6 +48,9 @@ $('.btn-background').on('click', function () {
     $('.main-header-updates').toggleClass('color');
     $('.header__menu').toggleClass('color');
     $('.fa-user-circle').toggleClass('color');
+    $('.zoek-tekst').toggleClass('color');
+    $('.btn-face').toggleClass('color');
+    $('.btn-background').toggleClass('color');
     $('.btn-face').toggleClass('move');
     
 
