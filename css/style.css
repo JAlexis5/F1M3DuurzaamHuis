@@ -23,7 +23,7 @@
 body {
     font-family: 'Montserrat', sans-serif;  
     background-color: var(--darker); 
-    color: var(--white);
+    color: var(--light);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,22 +34,50 @@ body {
     background: var(--green);
 }
 .main.color {
-    background: white;
+    background: var(--light);
 }
 
 .side-nav.color {
-    background: var(--light);
+    background: var(--white);
 }
 
 .footer.color {
     background: var(--green);
 }
 .widget.color {
-    background: var(--light);
+    background: var(--white);
 }
 
 .zoeken.color {
     background: white;
+}
+
+.sidenav-list-item.color {
+    color: black;
+}
+
+.sidenav-list-item.color:hover {
+    background-color: var(--light);
+}
+
+.title-white.color {
+    color: black;
+}
+
+.main-header-heading.color {
+    color: black;
+}
+
+.main-header-updates.color {
+    color: black;
+}
+
+.header__menu.color {
+    color: white;
+}
+
+.fa-user-circle.color {
+    color: white;
 }
 /* dark mode switch colors end */
 
@@ -77,7 +105,7 @@ body {
     vertical-align: text-bottom;
 }
 
-#title-green {
+.title-green {
     color: var(--green);
 }
 

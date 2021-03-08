@@ -35,6 +35,13 @@ $('.btn-background').on('click', function () {
     $('.widget').toggleClass('color');
     $('.footer').toggleClass('color');
     $('.zoeken').toggleClass('color');
+    $('.sidenav-list-item').toggleClass('color');
+    $('.sidenav-list-item').toggleClass('color:hover');
+    $('.title-white').toggleClass('color');
+    $('.main-header-heading').toggleClass('color');
+    $('.main-header-updates').toggleClass('color');
+    $('.header__menu').toggleClass('color');
+    $('.fa-user-circle').toggleClass('color');
     $('.btn-face').toggleClass('move');
     
 
