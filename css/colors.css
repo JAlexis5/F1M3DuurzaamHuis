@@ -1,0 +1,83 @@
+
+/* darkmode colors */
+:root {
+    --darkerer : #101010;
+    --darker: #131313;
+    --dark: #171717;
+    --green: #0b8e36;
+    --white: #ffffff;
+}
+
+/* lightmode colors */
+:root {
+    --lighterer : #ffffff;
+    --lighter: #f7f7f7;
+    --light: #eeeeee;
+    --green: #0b8e36;
+    --lightgreen: #3aaa35;
+    --lightergreen: #94c11f;
+}
+
+/* dark mode switch colors */
+.body.color {
+    background: var(--light);
+}
+
+.header.color {
+    background: var(--green);
+}
+.main.color {
+    background: var(--light);
+}
+
+.side-nav.color {
+    background: var(--white);
+}
+
+.footer.color {
+    background: var(--green);
+}
+.widget.color {
+    background: var(--white);
+}
+
+.zoeken.color {
+    background: white;
+}
+
+.sidenav-list-item.color {
+    color: black;
+}
+
+.sidenav-list-item.color:hover {
+    background-color: var(--light);
+}
+
+.title-white.color {
+    color: black;
+}
+
+.main-header-heading.color {
+    color: black;
+}
+
+.main-header-updates.color {
+    color: black;
+}
+
+.header__menu.color {
+    color: white;
+}
+
+.fa-user-circle.color {
+    color: white;
+}
+
+.zoek-text.color {
+    color: black;
+}
+
+.fa-github.color {
+    color: white;
+}
+/* dark mode switch colors end */

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;  
+    background-color: var(--darker); 
+    color: var(--light);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .6s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--green);
+    border-radius: 10px;
+}
+
+::selection {
+    color: #181818;
+    background: var(--green);
+}
+
+.fas {
+    color: var(--green);
+}
+
+.fa-github {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+    height: 100vh;
+  }
+
+/* main content begint hier */
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welkom1 {
+    font-weight: 500;
+}
+
+#welkom {
+    font-weight: 800;
+    font-size: 3em;
+    color: var(--green);
+}
+
+.random {
+    color: var(--green);
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.main {
+    grid-area: main;
+    background-color: var(--darker);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    height: 150px;
+    background-color: var(--dark);
+    color: white;
+    border-radius: .5em;
+}
+
+.main-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    grid-auto-rows: 150px;
+    grid-gap: 20px;
+    margin: 20px;
+}
+
+.overviewcard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--dark);
+    border-radius: .5em;
+}
+
+.main-cards {
+    column-count: 1;
+    column-gap: 20px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 500px 250px 300px;
+    grid-template-areas: "widget3 widget5"
+                         "widget4 widget4"
+                         "widget6 widget6"
+                         "widget7 widget7";
+}
+
+.widget3 {
+    grid-area: widget3;
+}
+
+.widget4 {
+    grid-area: widget4;
+}
+
+.widget5 {
+    grid-area: widget5;
+}
+
+.widget6 {
+    grid-area: widget6;
+}
+
+.widget7 {
+    grid-area: widget7;
+}
+
+.widget8 {
+    grid-area: widget8;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--dark);
+    margin-bottom: 20px;
+    -webkit-column-break-inside: avoid;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: .5em;
+}
+/* main content einde */
+
+/* footer begint hier */
+.footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: var(--dark);
+}
+
+.footer div {
+    color: white;
+}
+/* footer einde */

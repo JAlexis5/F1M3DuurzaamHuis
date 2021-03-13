@@ -35,6 +35,7 @@ sidenavCloseEl.on('click', function() {
 });
 
 $('.btn-background').on('click', function () {
+    $('.body').toggleClass('color');
     $('.header').toggleClass('color');
     $('.main').toggleClass('color');
     $('.side-nav').toggleClass('color');
@@ -52,6 +53,7 @@ $('.btn-background').on('click', function () {
     $('.btn-face').toggleClass('color');
     $('.btn-background').toggleClass('color');
     $('.btn-face').toggleClass('move');
+    $('.fa-github').toggleClass('color');
     
 
 

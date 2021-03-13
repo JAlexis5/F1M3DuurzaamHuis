@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap');
 
-
-/* darkmode colors */
-:root {
-    --darkerer : #1a1a1a;
-    --darker: #202020;
-    --dark: #292929;
-    --green: #0b8e36;
-    --white: #ffffff;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;  
     background-color: var(--darker); 
