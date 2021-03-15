@@ -3,7 +3,7 @@
 :root {
     --darkerer : #101010;
     --darker: #131313;
-    --dark: #171717;
+    --dark: #202020;
     --green: #0b8e36;
     --white: #ffffff;
 }
@@ -26,11 +26,24 @@
 .header.color {
     background: var(--green);
 }
+
+.menu-icon.color {
+    background: var(--green);
+}
+
 .main.color {
     background: var(--light);
 }
 
 .side-nav.color {
+    background: var(--white);
+}
+
+.card.color {
+    background: var(--white);
+}
+
+.overviewcard.color {
     background: var(--white);
 }
 

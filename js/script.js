@@ -43,11 +43,14 @@ $('.btn-background').on('click', function () {
     $('.footer').toggleClass('color');
     $('.zoeken').toggleClass('color');
     $('.sidenav-list-item').toggleClass('color');
+    $('.card').toggleClass('color');
+    $('.overviewcard').toggleClass('color');
     $('.sidenav-list-item').toggleClass('color:hover');
     $('.title-white').toggleClass('color');
     $('.main-header-heading').toggleClass('color');
     $('.main-header-updates').toggleClass('color');
     $('.header__menu').toggleClass('color');
+    $('.menu-icon').toggleClass('color');
     $('.fa-user-circle').toggleClass('color');
     $('.zoek-tekst').toggleClass('color');
     $('.btn-face').toggleClass('color');

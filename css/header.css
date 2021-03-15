@@ -11,6 +11,7 @@
     cursor: pointer;
     padding: 12px;
     color: var(--green);
+    background-color: var(--dark);
   }
 
 .header {
