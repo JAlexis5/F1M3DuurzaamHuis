@@ -133,6 +133,85 @@ body {
 
 .widget7 {
     grid-area: widget7;
+    text-align: center;
+}
+
+.fa-spotify {
+    color: var(--green);
+    position: relative;
+    float: right;
+}
+
+.fa-bluetooth-b {
+    color: var(--green);
+}
+
+.widget7 h4 {
+    margin-top: 0;
+}
+
+h4 i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.widget7 img {
+    height: 120px;
+}
+
+.level {
+    width: 80%;
+    margin: 2em 0 1em;
+    appearance: none;
+    background-color: var(--green);
+    border-radius: 5px;
+    height: 3px;
+}
+
+.level::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.level::-moz-range-thumb{
+    width: 50px;
+    height: 50px;
+}
+
+.buttons7 {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.button7 button:active{
+    background-color: red;
+}
+
+.buttons7 button {
+    width: 25;
+    height: 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+button i{
+    font-size: 1.5em;
+    color: white;
+}
+
+#play {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .widget8 {
