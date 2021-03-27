@@ -2,17 +2,17 @@
 .menu-icon {
     position: fixed;
     display: flex;
-    top: 5px;
-    left: 10px;
+    top: 30px;
+    left: 15px;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 40px;
     z-index: 1;
     cursor: pointer;
     padding: 12px;
     color: var(--green);
-    background-color: var(--dark);
-  }
+    background-color: var(--darker);
+}
 
 .header {
     grid-area: header;
@@ -20,8 +20,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
-    background-color: var(--dark);
-
+    background-color: var(--green);
+    border-radius: 25px 0px 25px 0px;
+    margin: 10px 10px 0px 10px;
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-width: 8px;
+    border-color: var(--darkgreen);
 }
 
 #avatar {
@@ -30,11 +37,21 @@
     cursor: pointer;
 }
 
+.fa-user-circle {
+    color: var(--darker);
+    height: 20px;
+    font-size: 35px;
+}
+
 .zoeken {
     background: var(--darker);
     height: 20px;
     border-radius: 40px;
     padding: 10px;
+}
+
+.zoek-button i {
+    color: var(--green);
 }
 
 .zoeken:hover > .zoek-text {

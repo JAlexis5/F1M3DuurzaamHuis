@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;0,900;1,100;1,400&display=swap');
 
 body {
-    font-family: 'Montserrat', sans-serif;  
+    font-family: 'Poppins', sans-serif;
     background-color: var(--darker); 
     color: var(--light);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all .6s ease-in-out;
 }
 
 ::-webkit-scrollbar {
@@ -37,7 +37,7 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr 50px;
+    grid-template-rows: 80px 1fr 80px;
     grid-template-areas:
       'header'
       'main'
@@ -45,12 +45,13 @@ body {
     height: 100vh;
   }
 
-/* main content begint hier */
+/* main content begint hier ------------------------------------------------------- */
 
 .main-header {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #welkom1 {
@@ -69,6 +70,10 @@ body {
     font-weight: 800;
 }
 
+.welkom-image {
+    height: 200px;
+}
+
 .main {
     grid-area: main;
     background-color: var(--darker);
@@ -82,7 +87,15 @@ body {
     height: 150px;
     background-color: var(--dark);
     color: white;
-    border-radius: .5em;
+    border-radius: .2em;
+    border-radius: 25px .2em 25px .2em;
+    border-style: solid;
+    border-color: var(--green);
+/*     border-top: none; */
+    border-bottom: none;
+/*     border-right: none;*/
+    border-left: none;
+    border-width: 5px;
 }
 
 .main-overview {
@@ -91,15 +104,6 @@ body {
     grid-auto-rows: 150px;
     grid-gap: 20px;
     margin: 20px;
-}
-
-.overviewcard {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: var(--dark);
-    border-radius: .5em;
 }
 
 .main-cards {
@@ -115,25 +119,228 @@ body {
                          "widget7 widget7";
 }
 
+.overviewcard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--dark);
+    border-radius: 25px .2em 25px .2em;
+}
+
+/* APPARATEN BATTERIJ WIDGET ------------------------------------------------------- */
+
+.widget1 {
+    border-style: solid;
+    border-color: var(--green);
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+/*     border-left: none; */
+    border-width: 5px;
+}
+
+.widget1 img {
+    height: 50px;
+    margin: 5px;
+}
+
+.batterij-box {
+    position: relative;
+    width: 25%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#circle-image1-b {
+    display: none;
+}
+
+#circle-image2-b {
+    display: none;
+}
+
+#circle-image3-b {
+    display: none;
+}
+
+#circle-image4-b {
+    display: none;
+}
+
+.batterij-box .percent {
+    position: relative;
+    width: 110px;
+    height: 150px;
+}
+
+.batterij-box .percent svg {
+    position: relative;
+    width: 99%;
+    height: 120px;
+    margin-top: 25px;
+}
+
+.batterij-box .percent svg circle {
+    width: 100%;
+    height: 150px;
+    fill: none;
+    stroke-width: 6;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+    stroke-linecap: round;
+}
+
+.batterij-box .percent .circle1 circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: var(--darker);
+}
+
+.batterij-box .percent .circle1 circle:nth-child(2){
+    stroke-dashoffset: 19.2;
+    stroke: var(--green);
+
+}
+
+.batterij-box .percent .circle2 circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: var(--darker);
+}
+
+.batterij-box .percent .circle2 circle:nth-child(2){
+    stroke-dashoffset: 175;
+    stroke: orange;
+
+}
+
+.batterij-box .percent .circle3 circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: var(--darker);
+}
+
+.batterij-box .percent .circle3 circle:nth-child(2){
+    stroke-dashoffset: 36;
+    stroke: var(--green);
+
+}
+
+.batterij-box .percent .circle4 circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: var(--darker);
+}
+
+.batterij-box .percent .circle4 circle:nth-child(2){
+    stroke-dashoffset: 249.6;
+    stroke: darkred;
+
+}
+
+.batterij-box .percent .nummer {
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    width: 100%;
+    height: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.batterij-tekst {
+    position: relative;
+    top: -20px;
+    font-weight: 700;
+    color: white;
+}
+
+.lightmode {
+    display: none;
+}
+
+.batterij-box .percent .lightmode circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: var(--light);
+}
+
+/* APPARATEN BATTERIJ WIDGET EINDE -------------------------------------------------------*/
+
+.widget2 {
+    border-style: solid;
+    border-color: var(--green);
+    border-top: none;
+/*     border-bottom: none; */
+/*     border-right: none; */
+    border-left: none;
+    border-width: 5px;
+}
+
 .widget3 {
     grid-area: widget3;
+        border-style: solid;
+    border-color: var(--green);
+/*     border-top: none; */
+    border-bottom: none;
+    border-right: none;
+/*     border-left: none; */
+    border-width: 5px;
 }
 
 .widget4 {
     grid-area: widget4;
+    border-style: solid;
+    border-color: var(--green);
+    border-top: none;
+/*     border-bottom: none; */
+/*     border-right: none; */
+    border-left: none;
+    border-width: 5px;
 }
 
 .widget5 {
     grid-area: widget5;
+    border-style: solid;
+    border-color: var(--green);
+/*     border-top: none; */
+    border-bottom: none;
+/*     border-right: none; */
+    border-left: none;
+    border-width: 5px;
 }
+
+/* GASVERBRUIK WIDGET ------------------------------------------------------- */
 
 .widget6 {
     grid-area: widget6;
+    overflow: hidden;
+    border-style: solid;
+    border-color: var(--green);
+/*     border-top: none; */
+    border-bottom: none;
+/*     border-right: none; */
+    border-left: none;
+    border-width: 5px;
 }
+
+/* GASVERBRUIK WIDGET EINDE ------------------------------------------------------- */
+
+
+/* MUZIEKSPELER WIDGET ------------------------------------------------------- */
 
 .widget7 {
     grid-area: widget7;
     text-align: center;
+    border-style: solid;
+    border-color: var(--green);
+    border-top: none;
+/*     border-bottom: none; */
+/*     border-right: none; */
+    border-left: none;
+    border-width: 5px;
 }
 
 .fa-spotify {
@@ -148,6 +355,7 @@ body {
 
 .widget7 h4 {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 h4 i {
@@ -155,8 +363,30 @@ h4 i {
     margin-right: 10px;
 }
 
-.widget7 img {
+.widget7 p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 10px;
+    opacity: 40%;
+}
+
+#muziek-cover {
     height: 120px;
+    color: black;
+    border-radius: 50%;
+}
+
+.muziek-animation {
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .level {
@@ -166,17 +396,30 @@ h4 i {
     background-color: var(--green);
     border-radius: 5px;
     height: 3px;
+    color: red;
+}
+
+input[type=range] {
+    -webkit-appearance: none
+}
+
+.level:focus {
+    outline: none;
 }
 
 .level::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
-    background-color: white;
+    background-color: var(--green);
     width: 20px;
     height: 20px;
     border-radius: 25px;
     cursor: pointer;
 }
+
+input[type=range]::-moz-range-progress {
+    height: 1em;
+  }
 
 .level::-moz-range-thumb{
     width: 50px;
@@ -189,10 +432,6 @@ h4 i {
     padding: 0;
     margin: 0;
     text-align: center;
-}
-
-.button7 button:active{
-    background-color: red;
 }
 
 .buttons7 button {
@@ -209,10 +448,26 @@ button i{
     color: white;
 }
 
-#play {
+button:focus{
+    outline: none;
+}
+
+#play{
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: -5px;
 }
+
+.widget7 img {
+    color: var(--green);
+    height: 20px;
+}
+
+.cover-light {
+    display: none;
+}
+
+/* MUZIEKSPELER WIDGET EINDE -------------------------------------------------------*/
 
 .widget8 {
     grid-area: widget8;
@@ -228,21 +483,34 @@ button i{
     -webkit-column-break-inside: avoid;
     padding: 24px;
     box-sizing: border-box;
-    border-radius: .5em;
+    border-radius: 25px .5em 25px .5em;
 }
-/* main content einde */
+/* main content einde -------------------------------------------------------*/
 
-/* footer begint hier */
+/* footer begint hier -------------------------------------------------------*/
 .footer {
     grid-area: footer;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
-    background-color: var(--dark);
+    margin: 10px 10px 10px 10px;
+    background-color: var(--green);
+    border-radius: 25px 0px 25px 0px;
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-width: 8px;
+    border-color: var(--darkgreen);
 }
 
 .footer div {
     color: white;
 }
-/* footer einde */
+
+.fa-github {
+    color: var(--darker);
+}
+
+/* footer einde -------------------------------------------------------*/

@@ -4,15 +4,18 @@
     --darkerer : #101010;
     --darker: #131313;
     --dark: #202020;
+    --lightdark: #252525;
+    --darkgreen: #076633;
     --green: #0b8e36;
-    --white: #ffffff;
+    --lightgreen : #3aaa35;
+    --white: #f2f2f2;
 }
 
 /* lightmode colors */
 :root {
     --lighterer : #ffffff;
     --lighter: #f7f7f7;
-    --light: #eeeeee;
+    --light: #d8d8d8;
     --green: #0b8e36;
     --lightgreen: #3aaa35;
     --lightergreen: #94c11f;
@@ -39,12 +42,68 @@
     background: var(--white);
 }
 
+.box .percent svg circle:nth-child(1).color {
+    stroke: yellow;
+}
+
+#circle-image1.color {
+    display: none;
+}
+
+#circle-image1-b.color {
+    display: inline;
+}
+
+#circle-image2.color {
+    display: none;
+}
+
+#circle-image2-b.color {
+    display: inline;
+}
+
+#circle-image3.color {
+    display: none;
+}
+
+#circle-image3-b.color {
+    display: inline;
+}
+
+#circle-image4.color {
+    display: none;
+}
+
+#circle-image4-b.color {
+    display: inline;
+}
+
+.batterij-tekst.color {
+    color: black;
+}
+
+.lightmode.color {
+    display: inline;
+}
+
+.darkmode.color {
+    display: none;
+}
+
 .card.color {
     background: var(--white);
 }
 
 .overviewcard.color {
     background: var(--white);
+}
+
+.widget7-tekst1.color {
+    color: black;
+}
+
+.widget7-tekst2.color {
+    color: black;
 }
 
 .footer.color {
@@ -88,6 +147,14 @@
 
 .zoek-text.color {
     color: black;
+}
+
+.cover-light.color{
+    display: inline;
+}
+
+.cover-dark.color{
+    display: none;
 }
 
 .fa-github.color {

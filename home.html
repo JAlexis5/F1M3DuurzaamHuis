@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/sidenav.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="https://use.typekit.net/grx7zxc.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -57,16 +58,87 @@
             <main class="main">
                 <div class="main-header widget">
                     <div class="main-header-heading">
-                        <div id="welkom1">Welkom,</div><div id="welkom"></div>
+                        <div id="welkom"></div>
+                        <div>Je hebt deze week €<span class="random"></span> bespaard!</div>
                     </div>
-                    <div class="main-header-updates">U heeft deze week €<span class="random"></span> bespaard!</div>
+                    <div class="main-header-image"><img class="welkom-image" src="images/undraw_build_your__home_csh6.svg" alt=""></div>
                 </div>
 
                 <div class="main-overview">
                     <div class="overviewcard widget1">
-                        <div class="overviewcard-icon widget"></div>
-                        <div class="overviewcard-info widget"></div>
+                        <div class="batterij-box">
+                            <div class="percent">
+                            <svg class="circle1 darkmode">
+                                <circle cx="50" cy="55" r="50"></circle>
+                                <circle cx="50" cy="55" r="50"></circle>
+                            </svg> 
+                            <svg class="circle1 lightmode">
+                                <circle cx="50" cy="55" r="50"></circle>
+                                <circle cx="50" cy="55" r="50"></circle>
+                            </svg> 
+                            <div class="nummer">
+                                <img id="circle-image1" src="images/iphone.svg">
+                                <img id="circle-image1-b" src="images/iphone-b.svg">
+                            </div>
+                            </div>
+                            <p class="batterij-tekst">94%</p>
+                        </div>
+
+                        <div class="batterij-box">
+                            <div class="percent">
+                            <svg class="circle2 darkmode">
+                                <circle cx="50" cy="55" r="50"></circle>
+                                <circle cx="50" cy="55" r="50"></circle>
+                            </svg>
+                            <svg class="circle2 lightmode">
+                                <circle cx="50" cy="55" r="50"></circle>
+                                <circle cx="50" cy="55" r="50"></circle>
+                            </svg>  
+                            <div class="nummer">
+                                <img id="circle-image2" src="images/airpods.svg">
+                                <img id="circle-image2-b" src="images/airpods-b.svg">
+                            </div>
+                            </div>
+                            <p class="batterij-tekst">49%</p>
+                        </div>
+
+                        <div class="batterij-box">
+                            <div class="percent">
+                            <svg class="circle3 darkmode">
+                                <circle cx="50" cy="55" r="50"></circle>
+                                <circle cx="50" cy="55" r="50"></circle>
+                            </svg> 
+                            <svg class="circle3 lightmode">
+                                <circle cx="50" cy="55" r="50"></circle>
+                                <circle cx="50" cy="55" r="50"></circle>
+                            </svg> 
+                            <div class="nummer">
+                                <img id="circle-image3" src="images/ipad.svg">
+                                <img id="circle-image3-b" src="images/ipad-b.svg">
+                            </div>
+                            </div>
+                            <p class="batterij-tekst">89%</p>
+                        </div>
+
+                        <div class="batterij-box">
+                            <div class="percent">
+                            <svg class="circle4 darkmode">
+                                <circle cx="50" cy="55" r="50"></circle>
+                                <circle cx="50" cy="55" r="50"></circle>
+                            </svg> 
+                            <svg class="circle4 lightmode">
+                                <circle cx="50" cy="55" r="50"></circle>
+                                <circle cx="50" cy="55" r="50"></circle>
+                            </svg> 
+                            <div class="nummer">
+                                <img id="circle-image4" src="images/apple-watch.svg">
+                                <img id="circle-image4-b" src="images/apple-watch-b.svg">
+                            </div>
+                            </div>
+                            <p class="batterij-tekst">22%</p>
+                        </div>
                     </div>
+                    
                     <div class="overviewcard widget2">
                         <div class="overviewcard-icon widget"></div>
                         <div class="overviewcard-info widget"></div>
@@ -77,14 +149,18 @@
                     <div class="card widget3"></div>
                     <div class="card widget4"></div>
                     <div class="card widget5"></div>
-                    <div class="card widget6"></div>
+                    <div class="card widget6">
+                        <canvas id="canvas" style="position: relative; height:100vh; width:60vw" ></canvas>
+                    </div>
                     <div class="card widget7">
-                        <h4><i class="fab fa-bluetooth-b"></i> JBL Charge 4</h4>
-                        <img src="images/wlr.png" alt="">
+                        <h4 class="widget7-tekst1"><i class="fab fa-bluetooth-b"></i > JBL Charge 4</h4>
+                        <p class="widget7-tekst2">Afspeellijst 4</p>
+                        <img id="muziek-cover" class="cover-dark" src="images/music.svg" alt="">
+                        <img id="muziek-cover" class="cover-light" src="images/music-lightmode.svg" alt="">
                         <input id="range" type="range" class="level" value="0" min="0">
                         <div class="buttons7">
                             <button id="prev"><i class="fas fa-backward"></i></button>
-                            <button id="play"><i class="fas fa-play"></i></button>
+                            <button id="play"><img id="play_img" src="images/play.svg"></button>
                             <button id="next"><i class="fas fa-forward"></i></button>
                         </div>
                     </div>
@@ -98,7 +174,8 @@
                 <div>© 2021</div>
             </footer>
         </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
 </html>

@@ -1,0 +1,50 @@
+{"maand_verbruik": [
+    {
+        "datum": "januari",
+        "verbruik": "250"
+    },
+    {
+        "datum": "februari",
+        "verbruik": "275"
+    },
+    {
+        "datum": "maart",
+        "verbruik": "260"
+    },
+    {
+        "datum": "april",
+        "verbruik": "220"
+    },
+    {
+        "datum": "mei",
+        "verbruik": "150"
+    },
+    {
+        "datum": "juni",
+        "verbruik": "110"
+    },
+    {
+        "datum": "juli",
+        "verbruik": "120"
+    },
+    {
+        "datum": "augustus",
+        "verbruik": "160"
+    },
+    {
+        "datum": "september",
+        "verbruik": "150"
+    },
+    {
+        "datum": "oktober",
+        "verbruik": "190"
+    },
+    {
+        "datum": "november",
+        "verbruik": "240"
+    },
+    {
+        "datum": "december",
+        "verbruik": "290"
+    }
+]}

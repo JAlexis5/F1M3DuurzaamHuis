@@ -4,14 +4,22 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 240px;
+    width: 232px;
     position: fixed;
     overflow-y: auto;
     transform: translateX(-245px);
     transition: all .6s ease-in-out;
     z-index: 2;
     background-color: var(--darkerer);
-    box-shadow: 1px 3px 3px 0 rgb(0, 0, 0, .2);
+    border-radius: 0px 25px 25px 0px;
+    border-style: solid;
+    border-color: var(--green);
+    border-top: none;
+    border-left: none;
+    border-width: 8px;
+    border-bottom-right-radius: 160px;
+    border-bottom-width: 1px;
+    border-bottom-left-radius: 10px;
 }
 
 .side-nav.active {
