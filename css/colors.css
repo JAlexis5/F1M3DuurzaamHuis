@@ -149,6 +149,18 @@
     color: black;
 }
 
+.weather-icon.color {
+    background-color: #f9f9f9;
+}
+
+.temperature-description p.color {
+    color: black;
+}
+
+.location p.color {
+    color: black;
+}
+
 .cover-light.color{
     display: inline;
 }

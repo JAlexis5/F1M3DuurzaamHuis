@@ -149,38 +149,36 @@
                 </div>
 
                 <div class="main-cards">
-                    <!--Temperatuur-->
+                    <!--Waterverbruik-->
                     <div class="card widget3">
-
                     </div>
 
-                    <!--Waterverbruik-->
+                    <!--Weer-->
                     <div class="card widget4">
-                        <div class="weather">
-                            <div class="description">
-                                <p>Dag</p>
-                                <p>Maximale Temperatuur:</p>
-                                <p>Minimale Temperatuur:</p>
-                                <p>Kans op Neerslag:</p>
+                        <div class="weather-title">
+                            <p>Het weer van vandaag</p>
+                        </div>
+                        <div class="notification"> </div>
+                        <div class="weather-container">
+                            <div class="weather-description">
+                                <div class="temperature-value">
+                                    <p>- °<span>C</span></p>
+                                </div>
+                                <div class="temperature-description">
+                                    <p> - </p>
+                                </div>
+                                <div class="location">
+                                    <p>-</p>
+                                </div>
                             </div>
-                            <div class="today">
-                                <p>Vandaag</p>
-                                <div id="weatherToday"></div>
-                            </div>
-                            <div class="tomorrow">
-                                <p>Morgen</p>
-                                <div id="weatherTomorrow"></div>
-                            </div>
-                            <div class="overmorrow">
-                                <p>Overmorgen</p>
-                                <div id="weatherOvermorrow"></div>
+                            <div class="weather-icon">
+                                <img src="icons/unknown.png" alt="">
                             </div>
                         </div>
                     </div>
 
-                    <!--Weer-->
+                    <!--Temp-->
                     <div class="card widget5">
-                        
                     </div>
 
                     <!--Gasverbruik-->
@@ -214,6 +212,6 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/weather.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>

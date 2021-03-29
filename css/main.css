@@ -112,7 +112,7 @@ body {
     margin: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 500px 250px 300px;
+    grid-template-rows: 300px 500px 300px 300px;
     grid-template-areas: "widget3 widget5"
                          "widget4 widget4"
                          "widget6 widget6"
@@ -126,6 +126,19 @@ body {
     padding: 20px;
     background-color: var(--dark);
     border-radius: 25px .2em 25px .2em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--dark);
+    margin-bottom: 20px;
+    -webkit-column-break-inside: avoid;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 25px .5em 25px .5em;
 }
 
 /* APPARATEN BATTERIJ WIDGET ------------------------------------------------------- */
@@ -290,6 +303,8 @@ body {
     border-width: 5px;
 }
 
+/* WEER WIDGET -------------------------------------------------------*/
+
 .widget4 {
     grid-area: widget4;
     border-style: solid;
@@ -299,9 +314,114 @@ body {
 /*     border-right: none; */
     border-left: none;
     border-width: 5px;
+    padding: 0;
+    overflow: hidden;
 }
 
-/* WEER WIDGET -------------------------------------------------------*/
+.weather-title {
+    background-color: var(--green);
+    width: 100%;
+    text-align: center;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.weather-title p {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.notification{
+    background-color: red;
+    display: none;
+}
+
+.notification p{
+    color: white;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.weather-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.weather-icon{
+    width: 250px;
+    background-color: #252525;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-description {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.weather-icon img{
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature-value{
+
+}
+
+.temperature-value p{
+    padding: 0;
+    margin: 0;
+    color: var(--green);
+    font-size: 8em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.temperature-value p:hover{
+    
+}
+
+.temperature-value span{
+    color: var(--green);
+    font-size: 0.5em;
+}
+
+.temperature-description{
+    
+}
+
+.temperature-description p{
+    padding: 8px;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.location{
+    
+}
+
+.location p{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+}
+/* WEER WIDGET EINDE-------------------------------------------------------*/
 
 .widget5 {
     position: relative;
@@ -314,17 +434,6 @@ body {
     border-left: none;
     border-width: 5px;
 }
-
-
-.weather {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-}
-
-
-/* WEER WIDGET EINDE -------------------------------------------------------*/
 
 /* GASVERBRUIK WIDGET ------------------------------------------------------- */
 
@@ -487,18 +596,6 @@ button:focus{
     grid-area: widget8;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: var(--dark);
-    margin-bottom: 20px;
-    -webkit-column-break-inside: avoid;
-    padding: 24px;
-    box-sizing: border-box;
-    border-radius: 25px .5em 25px .5em;
-}
 /* main content einde -------------------------------------------------------*/
 
 /* footer begint hier -------------------------------------------------------*/

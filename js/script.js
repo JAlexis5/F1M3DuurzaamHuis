@@ -17,6 +17,7 @@ const toggleClassName = (el, className) => {
   }
 }
 
+
 menuIconEl.on('click', function() {
   toggleClassName(sidenavEl, 'active');
 });
@@ -65,6 +66,9 @@ $('.btn-background').on('click', function () {
     $('.btn-face').toggleClass('move');
     $('.widget7-tekst1').toggleClass('color');
     $('.widget7-tekst2').toggleClass('color');
+    $('.weather-icon').toggleClass('color');
+    $('.temperature-description p').toggleClass('color');
+    $('.location p').toggleClass('color');
     $('.cover-dark').toggleClass('color');
     $('.cover-light').toggleClass('color');
     $('.fa-github').toggleClass('color');
@@ -91,12 +95,12 @@ function playSong(){
             isPlaying = true;
             total_time = song.duration;
             range.max = total_time;
-            play_img.src = "http://127.0.0.1:5500/assets/images/pause.svg";
+            play_img.src = "assets/images/pause.svg";
           $('#muziek-cover').toggleClass('muziek-animation');
           }else{
             song.pause();
             isPlaying = false;
-            play_img.src = "http://127.0.0.1:5500/assets/images/play.svg";
+            play_img.src = "assets/images/play.svg";
           $('#muziek-cover').removeClass('muziek-animation');
         }
        song.addEventListener('ended',function(){
@@ -104,7 +108,7 @@ function playSong(){
             song.pause();
             isPlaying = false;
             range.value = 0;
-            play_img.src = "http://127.0.0.1:5500/assets/images/play.svg";
+            play_img.src = "assets/images/play.svg";
           $('#muziek-cover').removeClass('muziek-animation');
         })
         song.addEventListener('timeupdate',function(){
