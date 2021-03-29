@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - GreenHouse</title>
-    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/colors.css">
 </head>
 <body>
     <div class="login-box">
-        <img src="images/DH.svg">
+        <img src="assets/images/DH.svg">
         <input maxlength="8" id="login" placeholder="vul hier uw gebruikersnaam in" required>
         <br>
         <button onclick="redirect()" id="login-button">Log in</button>
-        <script src="js/script.js"></script>
+        <script type="text/javascript">
+            function redirect(){
+                let naam = document.getElementById('login').value;
+                //window.location.href = "https://samedpolat.nl/GreenHouse/home.html"
+                window.location.href = "home.html";
+                console.log("test");
+                localStorage.setItem("storage",naam);
+            }
+            </script>
     </div>
 </body>
 </html>

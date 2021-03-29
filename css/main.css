@@ -301,7 +301,10 @@ body {
     border-width: 5px;
 }
 
+/* WEER WIDGET -------------------------------------------------------*/
+
 .widget5 {
+    position: relative;
     grid-area: widget5;
     border-style: solid;
     border-color: var(--green);
@@ -311,6 +314,17 @@ body {
     border-left: none;
     border-width: 5px;
 }
+
+
+.weather {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+
+
+/* WEER WIDGET EINDE -------------------------------------------------------*/
 
 /* GASVERBRUIK WIDGET ------------------------------------------------------- */
 

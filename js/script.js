@@ -1,12 +1,3 @@
-
-function redirect(){
-    let naam = document.getElementById('login').value;
-    //window.location.href = "https://samedpolat.nl/GreenHouse/home.html"
-    window.location.href = "home.html"
-    console.log("test");
-    localStorage.setItem("storage",naam);
-}
-
 $('.random').each(function () {
   var x = Math.floor((Math.random() * 80) + 1);
   $(this).text(x)
@@ -18,7 +9,7 @@ const menuIconEl = $('.menu-icon');
 const sidenavEl = $('.side-nav');
 const sidenavCloseEl = $('.sidenav-close-icon');
 
-function toggleClassName(el, className) {
+const toggleClassName = (el, className) => {
   if (el.hasClass(className)) {
     el.removeClass(className);
   } else {
@@ -79,7 +70,7 @@ $('.btn-background').on('click', function () {
     $('.fa-github').toggleClass('color');
 })
 
-music_name = "http://127.0.0.1:5500/files/sky.mp3"
+music_name = "assets/clair-de-lune.mid";
 let play_btn = document.querySelector("#play");
 let prev_btn = document.querySelector("#prev");
 let next_btn = document.querySelector("#next");
@@ -93,21 +84,19 @@ window.onload = playSong;
 
 function playSong(){
     song.src = music_name;
-    console.log(song)
-    
-    
+
     play_btn.addEventListener('click',function(){
         if(!isPlaying){
             song.play();
             isPlaying = true;
             total_time = song.duration;
             range.max = total_time;
-            play_img.src = "http://127.0.0.1:5500/images/pause.svg";
+            play_img.src = "http://127.0.0.1:5500/assets/images/pause.svg";
           $('#muziek-cover').toggleClass('muziek-animation');
           }else{
             song.pause();
             isPlaying = false;
-            play_img.src = "http://127.0.0.1:5500/images/play.svg";
+            play_img.src = "http://127.0.0.1:5500/assets/images/play.svg";
           $('#muziek-cover').removeClass('muziek-animation');
         }
        song.addEventListener('ended',function(){
@@ -115,7 +104,7 @@ function playSong(){
             song.pause();
             isPlaying = false;
             range.value = 0;
-            play_img.src = "http://127.0.0.1:5500/images/play.svg";
+            play_img.src = "http://127.0.0.1:5500/assets/images/play.svg";
           $('#muziek-cover').removeClass('muziek-animation');
         })
         song.addEventListener('timeupdate',function(){
