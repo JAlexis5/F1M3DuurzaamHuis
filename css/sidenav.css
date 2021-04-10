@@ -7,6 +7,7 @@
     width: 232px;
     position: fixed;
     overflow-y: auto;
+    overflow-x: hidden;
     transform: translateX(-245px);
     transition: all .6s ease-in-out;
     z-index: 2;

@@ -171,3 +171,36 @@ gasdata.onreadystatechange = function(){
     });
   }
 }
+
+const lightswitch1 = document.getElementById('licht1button');
+const lightswitch2 = document.getElementById('licht2button');
+
+lightswitch1.addEventListener('DOMContentLoaded', updateSwitch1());
+lightswitch2.addEventListener('DOMContentLoaded', updateSwitch2());
+
+
+function updateSwitch1(){
+  switch(lightswitch1.innerHTML) {
+    case "aan":
+      lightswitch1.innerHTML = "uit";
+      document.getElementById('licht1icon').innerHTML = "<i class='far fa-lightbulb'></i>";
+      break;
+    case "uit":
+      lightswitch1.innerHTML = "aan";
+      document.getElementById('licht1icon').innerHTML = "<i class='fas fa-lightbulb'></i>";
+      break;
+  };
+};
+
+function updateSwitch2() {
+  switch(lightswitch2.innerHTML) {
+    case "aan":
+      lightswitch2.innerHTML = "uit";
+      document.getElementById('licht2icon').innerHTML = "<i class='far fa-lightbulb'></i>";
+      break;
+    case "uit":
+      lightswitch2.innerHTML = "aan";
+      document.getElementById('licht2icon').innerHTML = "<i class='fas fa-lightbulb'></i>";
+      break;
+  };
+};
