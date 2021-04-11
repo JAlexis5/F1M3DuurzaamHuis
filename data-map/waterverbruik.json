@@ -1,0 +1,32 @@
+{"water_verbruik": [
+    {
+        "apparaat": "Toilet",
+        "verbruik": "896",
+        "kleur": "#0b8e36"
+    },
+    {
+        "apparaat": "Douche",
+        "verbruik": "1123",
+        "kleur": "#ADD8E6"
+    },
+    {
+        "apparaat": "Afwasmachine",
+        "verbruik": "31",
+        "kleur": "#4169E1"
+    },
+    {
+        "apparaat": "Vaatwasser",
+        "verbruik": "52",
+        "kleur": "orange"
+    },
+    {
+        "apparaat": "Wastafel",
+        "verbruik": "43",
+        "kleur": "darkred"
+    },
+    {
+        "apparaat": "Overige",
+        "verbruik": "9",
+        "kleur": "white"
+    }
+]}

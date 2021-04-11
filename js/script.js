@@ -137,6 +137,18 @@ $("input[type=range]").mousemove(function (e) {
       '-moz-linear-gradient(left center, #101010 0%, #0b8e36)');
 });
 
+const slideValue = document.querySelector("span");
+const inputSlider = document.querySelector("input");
+inputSlider.oninput = (()=>{
+  let value = inputSlider.value;
+  slideValue.textContent = value;
+  slideValue.style.left = (value/2) + "%";
+  slideValue.classList.add("show");
+});
+inputSlider.onblur = (()=>{
+  slideValue.classList.remove("show");
+});
+
 var gasdata = new XMLHttpRequest();
 var url = "data-map/gasverbruik.json"
 gasdata.open("GET", url, true);
@@ -170,6 +182,38 @@ gasdata.onreadystatechange = function(){
                 }]
             }
         }
+    });
+  }
+}
+
+var waterdata = new XMLHttpRequest();
+var url = "data-map/waterverbruik.json"
+waterdata.open("GET", url, true);
+waterdata.send();
+waterdata.onreadystatechange = function(){
+  if(this.readyState == 4 && this.status == 200){
+    var data = JSON.parse(this.responseText);
+    var apparaat = data.water_verbruik.map(function(elem) {
+      return elem.apparaat; 
+    });
+    var verbruik = data.water_verbruik.map(function(elem) {
+      return elem.verbruik; 
+    });
+    var kleur = data.water_verbruik.map(function(elem) {
+      return elem.kleur; 
+    });
+    var ctx = document.getElementById('canvas2').getContext('2d');
+    let myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+          labels: apparaat,
+          datasets: [{
+              label: 'Waterverbuik (lites) per week',
+              data: verbruik, 
+              backgroundColor: kleur,
+              borderWidth: 0
+          }]
+      },
     });
   }
 }

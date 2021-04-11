@@ -112,8 +112,9 @@ body {
     margin: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 500px 300px 300px;
-    grid-template-areas: "widget3 widget5"
+    grid-template-rows: 300px 300px 500px 300px 300px;
+    grid-template-areas: "widget3 widget3"
+                         "widget5 widget5"
                          "widget4 widget4"
                          "widget6 widget6"
                          "widget7 widget7";
@@ -349,6 +350,7 @@ body {
 
 /* LICHTEN WIDGET EINDE -------------------------------------------------------*/
 
+/* WATERVERBRUIK WIDGET -------------------------------------------------------*/
 
 .widget3 {
     grid-area: widget3;
@@ -359,7 +361,10 @@ body {
     border-right: none;
 /*     border-left: none; */
     border-width: 5px;
+    overflow: hidden;
 }
+
+/* WATERVERBRUIK WIDGET EINDE-------------------------------------------------------*/
 
 /* WEER WIDGET -------------------------------------------------------*/
 
@@ -434,10 +439,6 @@ body {
     margin: 0 auto;
 }
 
-.temperature-value{
-
-}
-
 .temperature-value p{
     padding: 0;
     margin: 0;
@@ -447,17 +448,9 @@ body {
     cursor: pointer;
 }
 
-.temperature-value p:hover{
-    
-}
-
 .temperature-value span{
     color: var(--green);
     font-size: 0.5em;
-}
-
-.temperature-description{
-    
 }
 
 .temperature-description p{
@@ -468,10 +461,6 @@ body {
     font-size: 1.2em;
 }
 
-.location{
-    
-}
-
 .location p{
     margin: 0;
     padding: 0;
@@ -480,6 +469,8 @@ body {
     font-size: 0.8em;
 }
 /* WEER WIDGET EINDE-------------------------------------------------------*/
+
+/* TEMP WIDGET ------------------------------------------------------- */
 
 .widget5 {
     position: relative;
@@ -492,6 +483,8 @@ body {
     border-left: none;
     border-width: 5px;
 }
+
+/* TEMP WIDGET EINDE ------------------------------------------------------- */
 
 /* GASVERBRUIK WIDGET ------------------------------------------------------- */
 
