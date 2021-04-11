@@ -64,6 +64,8 @@ $('.btn-background').on('click', function () {
     $('.btn-face').toggleClass('color');
     $('.btn-background').toggleClass('color');
     $('.btn-face').toggleClass('move');
+    $('.licht').toggleClass('color');
+    $('.licht-naam').toggleClass('color');
     $('.widget7-tekst1').toggleClass('color');
     $('.widget7-tekst2').toggleClass('color');
     $('.weather-icon').toggleClass('color');
@@ -187,7 +189,7 @@ function updateSwitch1(){
       break;
     case "uit":
       lightswitch1.innerHTML = "aan";
-      document.getElementById('licht1icon').innerHTML = "<i class='fas fa-lightbulb'></i>";
+      document.getElementById('licht1icon').innerHTML = "<i style='color: orange;' class='fas fa-lightbulb'></i>";
       break;
   };
 };
@@ -200,7 +202,7 @@ function updateSwitch2() {
       break;
     case "uit":
       lightswitch2.innerHTML = "aan";
-      document.getElementById('licht2icon').innerHTML = "<i class='fas fa-lightbulb'></i>";
+      document.getElementById('licht2icon').innerHTML = "<i style='color: orange;' class='fas fa-lightbulb'></i>";
       break;
   };
 };

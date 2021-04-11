@@ -282,6 +282,8 @@ body {
 
 /* APPARATEN BATTERIJ WIDGET EINDE -------------------------------------------------------*/
 
+/* LICHTEN WIDGET -------------------------------------------------------*/
+
 .widget2 {
     border-style: solid;
     border-color: var(--green);
@@ -291,6 +293,62 @@ body {
     border-left: none;
     border-width: 5px;
 }
+
+.licht {
+    background-color: var(--darker);
+    width: 48%;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    border-radius: 25px .5em 25px .5em;
+}
+
+.licht-naam {
+    border: solid 3px var(--green);
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    padding-right: 5px;
+}
+
+.fa-lightbulb {
+    color: var(--light);
+    cursor: pointer;
+}
+
+.licht-rechts i {
+    font-size: 32px;
+}
+
+.licht p {
+    color: var(--light);
+}
+
+#licht1button, #licht2button {
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    border-radius: 2px;
+    margin-top: 10px;
+    border-bottom-right-radius: 10px;
+    width: 40px;
+    transition: color .2s;
+    background-color: var(--green);
+    color: white;
+}
+
+#licht1button:hover, #licht2button:hover {
+    background-color: var(--light);
+    color: var(--darkerer);
+}
+
+/* LICHTEN WIDGET EINDE -------------------------------------------------------*/
+
 
 .widget3 {
     grid-area: widget3;

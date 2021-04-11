@@ -149,6 +149,14 @@
     color: black;
 }
 
+.licht.color {
+    background-color: var(--lighterer);
+}
+
+.licht-naam.color {
+    color: var(--darkerer);
+}
+
 .weather-icon.color {
     background-color: #f9f9f9;
 }
