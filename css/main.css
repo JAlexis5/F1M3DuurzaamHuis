@@ -370,6 +370,16 @@ body {
     width: 100%;
     text-align: center;
     border-radius: 10px 0px 0px 0px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.water-title p {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
 }
 
 /* WATERVERBRUIK WIDGET EINDE-------------------------------------------------------*/
@@ -398,7 +408,7 @@ body {
 
 .weather-title p {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     color: white;
 }
 
@@ -490,7 +500,12 @@ body {
 /*     border-right: none; */
     border-left: none;
     border-width: 5px;
+    transition: 250ms background-color, 250ms color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 
 /* TEMP WIDGET EINDE ------------------------------------------------------- */
 
