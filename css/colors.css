@@ -177,6 +177,14 @@
     display: none;
 }
 
+.temp-text.color {
+    color: var(--darkerer);
+}
+
+.temp.color {
+    fill: var(--darkerer);
+}
+
 .fa-github.color {
     color: white;
 }

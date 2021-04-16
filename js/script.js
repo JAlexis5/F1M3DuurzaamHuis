@@ -73,6 +73,8 @@ $('.btn-background').on('click', function () {
     $('.location p').toggleClass('color');
     $('.cover-dark').toggleClass('color');
     $('.cover-light').toggleClass('color');
+    $('.temp-text').toggleClass('color');
+    $('.temp').toggleClass('color');
     $('.fa-github').toggleClass('color');
 })
 
@@ -250,3 +252,32 @@ function updateSwitch2() {
       break;
   };
 };
+
+let temperatuur = 9;
+const temperatuurUitvoer = document.getElementById("temperatuur");
+const cirkelBoog = document.getElementById("cirkelBoog");
+const thermostaat = document.getElementById("thermostaat");
+
+const uitvoeren = (temp) => {
+  temperatuurUitvoer.innerHTML = temp;
+  let boog = (temp * 100) / 30;
+  cirkelBoog.style.strokeDasharray = `${boog} ${100 - boog}`;
+};
+const animeerUitvoer = (temp) => {
+  let t = 0;
+  const timer = setInterval(() => {
+    if (t <= temp) {
+      uitvoeren(t);
+
+      t++;
+    } else {
+      clearInterval(timer);
+    }
+  }, 25);
+};
+
+animeerUitvoer(thermostaat.value);
+
+thermostaat.addEventListener("change", () => {
+  animeerUitvoer(thermostaat.value);
+});
